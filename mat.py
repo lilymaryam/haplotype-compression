@@ -67,6 +67,15 @@ def decode_mut_sets_list(enc_mut_sets_list, m):
 
 # Create a dummy newick string
 nwk_str = '(A,(B,(C,D)internal_2)internal_1)root;'
+# 
+#    /-A
+# --|
+#   |   /-B
+#    \-|
+#      |   /-C
+#       \-|
+#          \-D
+#
 # Annotate mutations along the edges by writing sets of mutations in postorder
 mut_sets_list = [
     [ (35, 'C'), (444, 'G')], # e.g. these mutations are along the incoming edge to node A
